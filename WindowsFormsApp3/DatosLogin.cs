@@ -18,7 +18,7 @@ namespace WinFormsApp2
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("Login", Connection.Singleton.SqlConnetionFactory))
+                using (SqlCommand cmd = new SqlCommand("Logeo", Connection.Singleton.SqlConnetionFactory))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Usuario", e.Usuario);
