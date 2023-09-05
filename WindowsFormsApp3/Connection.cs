@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
 
 namespace WindowsFormsApp3
 {
@@ -18,11 +13,13 @@ namespace WindowsFormsApp3
             get { return sqlConnection; }
         }
 
-        public string ConnetionString{
-            
-            set {
+        public string ConnetionString
+        {
+
+            set
+            {
                 sqlConnection = new SqlConnection(value);
-                
+
             }
         }
 

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp3;
 
@@ -13,7 +9,7 @@ namespace WinFormsApp2
     internal class DatosLogin
     {
         //readonly SqlConnection cn = new SqlConnection("Data Source=DESKTOP-VLV57I9\\SQLEXPRESS;Initial Catalog=Senati;Integrated Security=True");
-        
+
         public DataTable Login(EntidadLogin e)
         {
             try
@@ -30,7 +26,8 @@ namespace WinFormsApp2
                         return tbl;
                     }
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;

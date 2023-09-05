@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtConeccion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -87,19 +88,29 @@
             // 
             // txtConeccion
             // 
-            this.txtConeccion.Location = new System.Drawing.Point(25, 326);
+            this.txtConeccion.Location = new System.Drawing.Point(22, 334);
             this.txtConeccion.Name = "txtConeccion";
             this.txtConeccion.Size = new System.Drawing.Size(542, 20);
             this.txtConeccion.TabIndex = 5;
             this.txtConeccion.Text = "Data Source=DESKTOP-VLV57I9\\SQLEXPRESS;Initial Catalog=Senati;Integrated Security" +
     "=True";
-            this.txtConeccion.TextChanged += new System.EventHandler(this.txtConeccion_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 318);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Cadena de Conexion";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtConeccion);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -123,6 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtConeccion;
+        private System.Windows.Forms.Label label3;
     }
 }
 
