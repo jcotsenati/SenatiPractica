@@ -24,7 +24,6 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Connection.Singleton.ConnetionString = txtConeccion.Text;
             //"Data Source=localhost,64930;Initial Catalog=Senati;User ID=sa;Password=***********"
             //"Data Source=DESKTOP-VLV57I9\\SQLEXPRESS;Initial Catalog=Senati;Integrated Security=True";
             objEntidad = new EntidadLogin();
@@ -38,6 +37,7 @@ namespace WindowsFormsApp3
             objEntidad.Contrasenia = txtContrasenia.Text;
 
             DataTable tbl = objNegocio.LogonN(objEntidad);
+            if (tbl == null) return;
 
             if (tbl.Rows.Count == 0)
             {

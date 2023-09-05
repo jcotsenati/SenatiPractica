@@ -33,7 +33,7 @@ namespace WinFormsApp2
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw ex;
+                return null;
             }
         }
     }
