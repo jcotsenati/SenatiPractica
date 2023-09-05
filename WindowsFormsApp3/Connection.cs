@@ -7,6 +7,7 @@ namespace WindowsFormsApp3
         // Connection's configuration:
         private static Connection singleton;
         private SqlConnection sqlConnection;
+        private string connectionString;
 
         public SqlConnection SqlConnetionFactory
         {
@@ -18,7 +19,11 @@ namespace WindowsFormsApp3
 
             set
             {
-                sqlConnection = new SqlConnection(value);
+                if (connectionString != value)
+                {
+                    connectionString = value;
+                    sqlConnection = new SqlConnection(value);
+                }
 
             }
         }
