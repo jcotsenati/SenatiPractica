@@ -13,6 +13,10 @@ namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
     {
+        EntidadLogin objEntidad;
+        NegocioLogin objNegocio;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -20,18 +24,24 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Connection.Singleton.ConnetionString = txtConeccion.Text;
+            //"Data Source=localhost,64930;Initial Catalog=Senati;User ID=sa;Password=***********"
+            //"Data Source=DESKTOP-VLV57I9\\SQLEXPRESS;Initial Catalog=Senati;Integrated Security=True";
+            objEntidad = new EntidadLogin();
+            objNegocio = new NegocioLogin();
 
         }
-        EntidadLogin objEntidad = new EntidadLogin();
-        NegocioLogin objNegocio = new NegocioLogin();
         void Login()//Creando un procedimiento.
         {
+            Connection.Singleton.ConnetionString = txtConeccion.Text;
             objEntidad.Usuario = txtUsuario.Text;
             objEntidad.Contrasenia = txtContrasenia.Text;
+
             DataTable tbl = objNegocio.LogonN(objEntidad);
+
             if (tbl.Rows.Count == 0)
             {
-                MessageBox.Show("No cohensiden Usuario y Contraseña \n Intentelo nuevamente",
+                MessageBox.Show("No coinciden Usuario y Contraseña \n Intentelo nuevamente",
 
                 "Acceso al Sistema", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
@@ -46,10 +56,16 @@ namespace WindowsFormsApp3
                 //FrmMenuPrincilpal Frm = new FrmMenuPrincilpal();
                 //Frm.Show();
             }
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
             Login();
+        }
+
+        private void txtConeccion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
