@@ -63,6 +63,8 @@
             this.Name = "FrmMenuPrincipal";
             this.Text = "Sistema de Alumnos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMenuPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
+            this.Shown += new System.EventHandler(this.FrmMenuPrincipal_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

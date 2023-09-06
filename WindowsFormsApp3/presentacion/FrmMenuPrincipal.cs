@@ -31,5 +31,17 @@ namespace WindowsFormsApp3.presentacion
         {
             Application.Exit();
         }
+
+        private void FrmMenuPrincipal_Shown(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bienvenido al Sistema", "Acceso al Sistema",
+            MessageBoxButtons.OK);
+            //Ocultamos el formulario Login
+        }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }

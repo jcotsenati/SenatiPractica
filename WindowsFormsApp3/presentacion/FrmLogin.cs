@@ -19,6 +19,7 @@ namespace WindowsFormsApp3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.CenterToScreen();
             //"Data Source=localhost,64930;Initial Catalog=Senati;User ID=sa;Password=***********"
             //"Data Source=DESKTOP-VLV57I9\\SQLEXPRESS;Initial Catalog=Senati;Integrated Security=True";
             objEntidad = new EntidadLogin();
