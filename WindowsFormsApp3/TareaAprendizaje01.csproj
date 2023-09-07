@@ -47,15 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datos\Connection.cs" />
-    <Compile Include="datos\DatosLogin.cs" />
-    <Compile Include="datos\EntidadLogin.cs" />
+    <Compile Include="datos\alumno\DatosAlumno.cs" />
+    <Compile Include="datos\login\DatosLogin.cs" />
+    <Compile Include="datos\alumno\EntidadAlumno.cs" />
+    <Compile Include="datos\login\EntidadLogin.cs" />
+    <Compile Include="negocio\alumno\NegocioAlumno.cs" />
     <Compile Include="presentacion\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="negocio\NegocioLogin.cs" />
+    <Compile Include="negocio\login\NegocioLogin.cs" />
     <Compile Include="presentacion\FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
