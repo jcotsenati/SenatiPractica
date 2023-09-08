@@ -8,5 +8,9 @@ namespace WindowsFormsApp3.datos
 {
     internal class EntidadAlumno
     {
+        public String Dni { get; set; }
+        public String Nombres { get; set; }
+        public String Apellidos { get; set; }
+
     }
 }

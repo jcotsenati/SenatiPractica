@@ -11,7 +11,12 @@ namespace WindowsFormsApp3
 
         public SqlConnection SqlConnetionFactory
         {
-            get { return sqlConnection; }
+            get {
+                if (sqlConnection.State == System.Data.ConnectionState.Closed)
+                    sqlConnection.Open();
+
+                return sqlConnection; 
+            }
         }
 
         public string ConnetionString
