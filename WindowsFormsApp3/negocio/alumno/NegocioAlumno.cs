@@ -13,7 +13,8 @@ namespace WindowsFormsApp3.negocio
 
         public int InsertarAlumnoN(EntidadAlumno alumno)
         {
-            int numRes= datosAlumno.InsertarAlumno(alumno);
+            int numRes = datosAlumno.InsertarAlumno(alumno);
             return numRes;
         }
+    }
 }
