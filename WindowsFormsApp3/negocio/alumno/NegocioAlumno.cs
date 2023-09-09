@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp3.datos;
+using WindowsFormsApp3.negocio.alumno;
 
 namespace WindowsFormsApp3.negocio
 {
@@ -17,19 +18,16 @@ namespace WindowsFormsApp3.negocio
             //validaciones
             if (alumno.Dni.Length != 8)
             {
-                MessageBox.Show("Longitud de dni incorrecta");
-                return 0;
+                throw new ExceptionNegocioAlumno("Longitud de dni incorrecta");
             }
             if (alumno.Nombres.Length == 0) {
-                MessageBox.Show("Nombres esta vacio");
-                return 0;
+                throw new ExceptionNegocioAlumno("Nombres esta vacio");
             }
             if (alumno.Apellidos.Length == 0)
             {
-                MessageBox.Show("Apellidos esta vacio");
-                return 0;
+                throw new ExceptionNegocioAlumno("Apellidos esta vacio");
             }
-
+            
             int numRes = datosAlumno.InsertarAlumno(alumno);
             return numRes;
         }

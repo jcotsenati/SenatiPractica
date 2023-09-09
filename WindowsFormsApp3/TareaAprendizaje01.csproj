@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="datos\alumno\ExceptionDatosAlumno.cs" />
     <Compile Include="datos\Connection.cs" />
     <Compile Include="datos\alumno\DatosAlumno.cs" />
     <Compile Include="datos\login\DatosLogin.cs" />
     <Compile Include="datos\alumno\EntidadAlumno.cs" />
     <Compile Include="datos\login\EntidadLogin.cs" />
+    <Compile Include="negocio\alumno\ExceptionNegocioAlumno.cs" />
     <Compile Include="negocio\alumno\NegocioAlumno.cs" />
     <Compile Include="presentacion\alumno\FrmIngresarAlumno.cs">
       <SubType>Form</SubType>

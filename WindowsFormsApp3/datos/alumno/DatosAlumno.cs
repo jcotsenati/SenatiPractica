@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlTypes;
+using WindowsFormsApp3.datos.alumno;
 
 namespace WindowsFormsApp3.datos
 {
@@ -34,8 +35,7 @@ namespace WindowsFormsApp3.datos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return 0;
+                throw new ExceptionDatosAlumno(ex.Message);
             }
         }
         public void EditarAlumno(EntidadAlumno alumno)

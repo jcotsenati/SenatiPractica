@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp3.datos;
+using WindowsFormsApp3.datos.alumno;
 using WindowsFormsApp3.negocio;
+using WindowsFormsApp3.negocio.alumno;
 
 namespace WindowsFormsApp3.presentacion.alumno
 {
@@ -27,14 +29,31 @@ namespace WindowsFormsApp3.presentacion.alumno
             alumno.Dni = txtDni.Text;
             alumno.Nombres = txtNombres.Text;
             alumno.Apellidos = txtApellidos.Text;
-            int num = negocioAlumno.InsertarAlumnoN(alumno);
 
-            if (num != 0)
+            try { 
+                int num = negocioAlumno.InsertarAlumnoN(alumno);
+
+                if (num != 0)
+                {
+                    MessageBox.Show("Operacion Satisfactoria");
+                    txtDni.Text = "";
+                    txtNombres.Text = "";
+                    txtApellidos.Text = "";
+                }
+            }
+            catch (ExceptionDatosAlumno ex)
             {
-                MessageBox.Show("Operacion Satisfactoria");
-                txtDni.Text = "";
-                txtNombres.Text = "";
-                txtApellidos.Text = "";
+
+                MessageBox.Show(ex.Message,"Error Capa de Datos");
+            }
+            catch (ExceptionNegocioAlumno ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error Capa de Negocio");
+            }
+            catch (Exception ex) {
+
+                MessageBox.Show(ex.Message,"Error");
             }
         }
 
