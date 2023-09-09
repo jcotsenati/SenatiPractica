@@ -59,14 +59,14 @@
             this.txtApellidos.Location = new System.Drawing.Point(157, 141);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(136, 20);
-            this.txtApellidos.TabIndex = 2;
+            this.txtApellidos.TabIndex = 3;
             // 
             // txtNombres
             // 
             this.txtNombres.Location = new System.Drawing.Point(157, 98);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(136, 20);
-            this.txtNombres.TabIndex = 3;
+            this.txtNombres.TabIndex = 2;
             // 
             // label1
             // 

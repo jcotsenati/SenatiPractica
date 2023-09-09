@@ -32,6 +32,9 @@ namespace WindowsFormsApp3.presentacion.alumno
             if (num != 0)
             {
                 MessageBox.Show("Operacion Satisfactoria");
+                txtDni.Text = "";
+                txtNombres.Text = "";
+                txtApellidos.Text = "";
             }
         }
 
