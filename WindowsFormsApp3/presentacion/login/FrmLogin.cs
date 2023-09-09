@@ -17,7 +17,7 @@ namespace WindowsFormsApp3
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
             //"Data Source=localhost,64930;Initial Catalog=Senati;User ID=sa;Password=***********"
@@ -52,13 +52,13 @@ namespace WindowsFormsApp3
                 //Ocultamos el formulario Login
                 this.Hide();
                 //Mostramos el MenuPrincipal
-                FrmMenuPrincipal Frm = new FrmMenuPrincipal();
-                Frm.Show();
+                FrmMenuPrincipal frmMenuPrincipal = new FrmMenuPrincipal();
+                frmMenuPrincipal.Show();
               
             }
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
             Login();
         }

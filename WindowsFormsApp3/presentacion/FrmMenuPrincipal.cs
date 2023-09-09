@@ -17,12 +17,6 @@ namespace WindowsFormsApp3.presentacion
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
