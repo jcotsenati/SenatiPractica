@@ -109,6 +109,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Name = "FrmIngresarAlumno";
             this.Text = "Ingresar Alumno";
+            this.Load += new System.EventHandler(this.FrmIngresarAlumno_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

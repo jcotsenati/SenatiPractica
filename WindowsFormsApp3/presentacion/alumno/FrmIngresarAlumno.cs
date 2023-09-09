@@ -34,5 +34,10 @@ namespace WindowsFormsApp3.presentacion.alumno
                 MessageBox.Show("Operacion Satisfactoria");
             }
         }
+
+        private void FrmIngresarAlumno_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+        }
     }
 }
