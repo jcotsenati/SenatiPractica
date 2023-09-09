@@ -52,10 +52,16 @@
     <Compile Include="datos\alumno\EntidadAlumno.cs" />
     <Compile Include="datos\login\EntidadLogin.cs" />
     <Compile Include="negocio\alumno\NegocioAlumno.cs" />
-    <Compile Include="presentacion\FrmLogin.cs">
+    <Compile Include="presentacion\alumno\FrmIngresarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presentacion\FrmLogin.Designer.cs">
+    <Compile Include="presentacion\alumno\FrmIngresarAlumno.Designer.cs">
+      <DependentUpon>FrmIngresarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\login\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="negocio\login\NegocioLogin.cs" />
@@ -67,7 +73,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="presentacion\FrmLogin.resx">
+    <EmbeddedResource Include="presentacion\alumno\FrmIngresarAlumno.resx">
+      <DependentUpon>FrmIngresarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\FrmMenuPrincipal.resx">

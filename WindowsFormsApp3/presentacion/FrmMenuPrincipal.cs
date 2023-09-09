@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp3.presentacion.alumno;
 
 namespace WindowsFormsApp3.presentacion
 {
@@ -42,6 +43,12 @@ namespace WindowsFormsApp3.presentacion
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            FrmIngresarAlumno frmIngresarAlumno = new FrmIngresarAlumno();
+            frmIngresarAlumno.ShowDialog();
         }
     }
 }
