@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using WindowsFormsApp3;
+using WindowsFormsApp3.datos.login;
 
 namespace WinFormsApp2
 {
@@ -29,8 +30,7 @@ namespace WinFormsApp2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                return null;
+                throw new ExceptionDatosLogin(ex.Message);
             }
         }
     }

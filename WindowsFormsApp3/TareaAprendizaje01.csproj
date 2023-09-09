@@ -52,6 +52,7 @@
     <Compile Include="datos\login\DatosLogin.cs" />
     <Compile Include="datos\alumno\EntidadAlumno.cs" />
     <Compile Include="datos\login\EntidadLogin.cs" />
+    <Compile Include="datos\login\ExceptionDatosLogin.cs" />
     <Compile Include="negocio\alumno\ExceptionNegocioAlumno.cs" />
     <Compile Include="negocio\alumno\NegocioAlumno.cs" />
     <Compile Include="presentacion\alumno\FrmIngresarAlumno.cs">

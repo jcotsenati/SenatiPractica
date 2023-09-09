@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using WindowsFormsApp3.datos.login;
 using WindowsFormsApp3.presentacion;
 using WinFormsApp2;
 
@@ -32,29 +33,40 @@ namespace WindowsFormsApp3
             objEntidad.Usuario = txtUsuario.Text;
             objEntidad.Contrasenia = txtContrasenia.Text;
 
-            DataTable tbl = objNegocio.LogonN(objEntidad);
-            if (tbl == null) return;
-
-            if (tbl.Rows.Count == 0)
+            try
             {
-                MessageBox.Show("No coinciden Usuario y Contraseña \n Intentelo nuevamente",
+                DataTable tbl = objNegocio.LogonN(objEntidad);
+                if (tbl == null) return;
 
-                "Acceso al Sistema", MessageBoxButtons.OK,
-               MessageBoxIcon.Error);
-                txtUsuario.Text = "";
-                txtContrasenia.Text = "";
-                txtUsuario.Focus();
+                if (tbl.Rows.Count == 0)
+                {
+                    MessageBox.Show("No coinciden Usuario y Contraseña \n Intentelo nuevamente",
+
+                    "Acceso al Sistema", MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
+                    txtUsuario.Text = "";
+                    txtContrasenia.Text = "";
+                    txtUsuario.Focus();
+                }
+                else
+                {
+                    //MessageBox.Show("Bienvenido al Sistema", "Acceso al Sistema",
+                    //MessageBoxButtons.OK);
+                    //Ocultamos el formulario Login
+                    this.Hide();
+                    //Mostramos el MenuPrincipal
+                    FrmMenuPrincipal frmMenuPrincipal = new FrmMenuPrincipal();
+                    frmMenuPrincipal.Show();
+
+                }
             }
-            else
+            catch (ExceptionDatosLogin ex) {
+
+                MessageBox.Show(ex.Message, "Error Capa de Datos");
+            }
+            catch (Exception ex)
             {
-                //MessageBox.Show("Bienvenido al Sistema", "Acceso al Sistema",
-                //MessageBoxButtons.OK);
-                //Ocultamos el formulario Login
-                this.Hide();
-                //Mostramos el MenuPrincipal
-                FrmMenuPrincipal frmMenuPrincipal = new FrmMenuPrincipal();
-                frmMenuPrincipal.Show();
-              
+                MessageBox.Show(ex.Message, "Error");
             }
 
         }
