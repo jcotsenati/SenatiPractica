@@ -20,11 +20,11 @@ namespace WindowsFormsApp3.negocio
                 MessageBox.Show("Longitud de dni incorrecta");
                 return 0;
             }
-            if (alumno.Nombres.Length != 8) {
+            if (alumno.Nombres.Length == 0) {
                 MessageBox.Show("Nombres esta vacio");
                 return 0;
             }
-            if (alumno.Apellidos.Length != 8)
+            if (alumno.Apellidos.Length == 0)
             {
                 MessageBox.Show("Apellidos esta vacio");
                 return 0;
