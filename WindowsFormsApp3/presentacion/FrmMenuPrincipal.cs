@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp3.negocio;
 using WindowsFormsApp3.presentacion.alumno;
 
 namespace WindowsFormsApp3.presentacion
 {
     public partial class FrmMenuPrincipal : Form
     {
+        NegocioAlumno negocioAlumno = new NegocioAlumno();
+
         public FrmMenuPrincipal()
         {
             InitializeComponent();
@@ -29,6 +32,7 @@ namespace WindowsFormsApp3.presentacion
 
         private void FrmMenuPrincipal_Shown(object sender, EventArgs e)
         {
+            RefrescarTodosAlumnos();
             MessageBox.Show("Bienvenido al Sistema", "Acceso al Sistema",
             MessageBoxButtons.OK);
             //Ocultamos el formulario Login
@@ -43,6 +47,18 @@ namespace WindowsFormsApp3.presentacion
         {
             FrmIngresarAlumno frmIngresarAlumno = new FrmIngresarAlumno();
             frmIngresarAlumno.ShowDialog();
+            RefrescarTodosAlumnos();
+        }
+        private void RefrescarTodosAlumnos()
+        {
+
+            dgvAlumnos.DataSource = negocioAlumno.ObtenerTodosAlumnosN();
+        }
+
+        private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string valor = dgvAlumnos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            MessageBox.Show("clave id " + valor);
         }
     }
 }

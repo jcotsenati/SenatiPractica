@@ -46,5 +46,27 @@ namespace WindowsFormsApp3.datos
         {
 
         }
+        public DataTable ObtenerTodosAlumnos()
+        {
+
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand("obtenerTodosAlumnos", Connection.Singleton.SqlConnetionFactory))
+                {
+                    DataTable dtData = new DataTable();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter sqlSda = new SqlDataAdapter(cmd);
+                    sqlSda.Fill(dtData);
+                    return dtData;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+        }
     }
 }
