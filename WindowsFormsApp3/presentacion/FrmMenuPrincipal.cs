@@ -52,7 +52,7 @@ namespace SenatiPractica.presentacion
         }
         private void RefrescarTodosAlumnos()
         {
-
+            //En caso el DataSource es null, no muestra nada en la grilla
             dgvAlumnos.DataSource = _negocioAlumno.ObtenerTodosAlumnosN();
         }
 
