@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp2
+﻿namespace SenatiPractica.datos.login
 {
     internal class EntidadLogin
     {

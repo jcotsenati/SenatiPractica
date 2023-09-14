@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp3
+namespace SenatiPractica
 {
     internal static class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3.presentacion
+﻿namespace SenatiPractica.presentacion
 {
     partial class FrmMenuPrincipal
     {

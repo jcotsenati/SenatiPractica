@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3.presentacion.alumno
+﻿namespace SenatiPractica.presentacion.alumno
 {
     partial class FrmIngresarAlumno
     {

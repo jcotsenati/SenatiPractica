@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp3
+﻿namespace SenatiPractica
 {
     partial class FrmLogin
     {

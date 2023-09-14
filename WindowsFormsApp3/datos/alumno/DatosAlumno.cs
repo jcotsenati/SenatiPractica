@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlTypes;
 
-namespace WindowsFormsApp3.datos
+namespace SenatiPractica.datos.alumno
 {
     internal class DatosAlumno
     {

@@ -1,6 +1,7 @@
 ﻿using System.Data;
+using SenatiPractica.datos.login;
 
-namespace WinFormsApp2
+namespace SenatiPractica.negocio.login
 {
     internal class NegocioLogin
     {

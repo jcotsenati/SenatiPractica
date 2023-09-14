@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using WindowsFormsApp3.presentacion;
-using WinFormsApp2;
+using SenatiPractica.datos.login;
+using SenatiPractica.negocio.login;
+using SenatiPractica.presentacion;
 
-namespace WindowsFormsApp3
+namespace SenatiPractica
 {
     public partial class FrmLogin : Form
     {

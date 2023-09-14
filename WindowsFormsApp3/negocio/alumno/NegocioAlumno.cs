@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp3.datos;
+using SenatiPractica.datos;
+using SenatiPractica.datos.alumno;
 
-namespace WindowsFormsApp3.negocio
+namespace SenatiPractica.negocio.alumno
 {
     internal class NegocioAlumno
     {

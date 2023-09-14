@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp3.datos;
-using WindowsFormsApp3.negocio;
+using SenatiPractica.datos;
+using SenatiPractica.datos.alumno;
+using SenatiPractica.negocio;
+using SenatiPractica.negocio.alumno;
 
-namespace WindowsFormsApp3.presentacion.alumno
+namespace SenatiPractica.presentacion.alumno
 {
     public partial class FrmIngresarAlumno : Form
     {

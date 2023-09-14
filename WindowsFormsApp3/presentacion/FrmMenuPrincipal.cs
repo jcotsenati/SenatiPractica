@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp3.negocio;
-using WindowsFormsApp3.presentacion.alumno;
+using SenatiPractica.negocio;
+using SenatiPractica.negocio.alumno;
+using SenatiPractica.presentacion.alumno;
 
-namespace WindowsFormsApp3.presentacion
+namespace SenatiPractica.presentacion
 {
     public partial class FrmMenuPrincipal : Form
     {

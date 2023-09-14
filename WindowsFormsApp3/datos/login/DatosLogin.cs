@@ -2,9 +2,8 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using WindowsFormsApp3;
 
-namespace WinFormsApp2
+namespace SenatiPractica.datos.login
 {
     internal class DatosLogin
     {

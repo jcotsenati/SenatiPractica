@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace WindowsFormsApp3
+namespace SenatiPractica
 {
     class Connection
     {
