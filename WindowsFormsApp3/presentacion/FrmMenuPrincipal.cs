@@ -14,7 +14,7 @@ namespace WindowsFormsApp3.presentacion
 {
     public partial class FrmMenuPrincipal : Form
     {
-        NegocioAlumno negocioAlumno = new NegocioAlumno();
+        private NegocioAlumno _negocioAlumno = new NegocioAlumno();
 
         public FrmMenuPrincipal()
         {
@@ -27,7 +27,7 @@ namespace WindowsFormsApp3.presentacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void FrmMenuPrincipal_Shown(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace WindowsFormsApp3.presentacion
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();
+            CenterToScreen();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace WindowsFormsApp3.presentacion
         private void RefrescarTodosAlumnos()
         {
 
-            dgvAlumnos.DataSource = negocioAlumno.ObtenerTodosAlumnosN();
+            dgvAlumnos.DataSource = _negocioAlumno.ObtenerTodosAlumnosN();
         }
 
         private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)

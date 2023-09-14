@@ -11,7 +11,7 @@ namespace WindowsFormsApp3.negocio
 {
     internal class NegocioAlumno
     {
-        DatosAlumno datosAlumno = new DatosAlumno();
+        private DatosAlumno _datosAlumno = new DatosAlumno();
 
         public int InsertarAlumnoN(EntidadAlumno alumno)
         {
@@ -31,14 +31,14 @@ namespace WindowsFormsApp3.negocio
                 return 0;
             }
 
-            int numRes = datosAlumno.InsertarAlumno(alumno);
+            int numRes = _datosAlumno.InsertarAlumno(alumno);
             return numRes;
         }
 
         public DataTable ObtenerTodosAlumnosN()
         {
 
-            return datosAlumno.ObtenerTodosAlumnos();
+            return _datosAlumno.ObtenerTodosAlumnos();
         }
     }
 }

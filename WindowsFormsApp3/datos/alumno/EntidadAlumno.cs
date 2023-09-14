@@ -12,5 +12,13 @@ namespace WindowsFormsApp3.datos
         public String Nombres { get; set; }
         public String Apellidos { get; set; }
 
+        // Constructor
+        public EntidadAlumno(string dni, string nombres, string apellidos)
+        {
+            Dni = dni;
+            Nombres = nombres;
+            Apellidos = apellidos;
+        }
+        public EntidadAlumno() { }
     }
 }

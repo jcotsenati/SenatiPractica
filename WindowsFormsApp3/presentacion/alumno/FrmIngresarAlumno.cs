@@ -14,6 +14,8 @@ namespace WindowsFormsApp3.presentacion.alumno
 {
     public partial class FrmIngresarAlumno : Form
     {
+        private NegocioAlumno _negocioAlumno = new NegocioAlumno();
+
         public FrmIngresarAlumno()
         {
             InitializeComponent();
@@ -21,13 +23,12 @@ namespace WindowsFormsApp3.presentacion.alumno
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            NegocioAlumno negocioAlumno = new NegocioAlumno();
-            EntidadAlumno alumno = new EntidadAlumno();
-
-            alumno.Dni = txtDni.Text;
-            alumno.Nombres = txtNombres.Text;
-            alumno.Apellidos = txtApellidos.Text;
-            int num = negocioAlumno.InsertarAlumnoN(alumno);
+            
+            EntidadAlumno alumno = new EntidadAlumno(txtDni.Text, txtNombres.Text, txtApellidos.Text);
+            //alumno.Dni = txtDni.Text;
+            //alumno.Nombres = txtNombres.Text;
+            //alumno.Apellidos = txtApellidos.Text;
+            int num = _negocioAlumno.InsertarAlumnoN(alumno);
 
             if (num != 0)
             {
@@ -40,7 +41,7 @@ namespace WindowsFormsApp3.presentacion.alumno
 
         private void FrmIngresarAlumno_Load(object sender, EventArgs e)
         {
-            this.CenterToScreen();
+            CenterToScreen();
         }
     }
 }

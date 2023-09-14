@@ -8,8 +8,8 @@ namespace WindowsFormsApp3
 {
     public partial class FrmLogin : Form
     {
-        EntidadLogin objEntidad;
-        NegocioLogin objNegocio;
+        EntidadLogin _objEntidad;
+        NegocioLogin _objNegocio;
 
 
         public FrmLogin()
@@ -22,17 +22,17 @@ namespace WindowsFormsApp3
             this.CenterToScreen();
             //"Data Source=localhost,64930;Initial Catalog=Senati;User ID=sa;Password=***********"
             //"Data Source=DESKTOP-VLV57I9\\SQLEXPRESS;Initial Catalog=Senati;Integrated Security=True";
-            objEntidad = new EntidadLogin();
-            objNegocio = new NegocioLogin();
+            _objEntidad = new EntidadLogin();
+            _objNegocio = new NegocioLogin();
 
         }
         void Login()//Creando un procedimiento.
         {
             Connection.Singleton.ConnetionString = txtConeccion.Text;
-            objEntidad.Usuario = txtUsuario.Text;
-            objEntidad.Contrasenia = txtContrasenia.Text;
+            _objEntidad.Usuario = txtUsuario.Text;
+            _objEntidad.Contrasenia = txtContrasenia.Text;
 
-            DataTable tbl = objNegocio.LogonN(objEntidad);
+            DataTable tbl = _objNegocio.LogonN(_objEntidad);
             if (tbl == null) return;
 
             if (tbl.Rows.Count == 0)
