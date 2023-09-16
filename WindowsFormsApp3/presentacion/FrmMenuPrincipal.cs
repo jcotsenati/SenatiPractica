@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using SenatiPractica.negocio;
 using SenatiPractica.negocio.alumno;
 using SenatiPractica.presentacion.alumno;
+using SenatiPractica.presentacion.alumno;
 
 namespace SenatiPractica.presentacion
 {
@@ -60,6 +61,32 @@ namespace SenatiPractica.presentacion
         {
             string valor = dgvAlumnos.Rows[e.RowIndex].Cells[0].Value.ToString();
             MessageBox.Show("clave id " + valor);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            FrmBuscarAlumno frmBuscarAlumno= new FrmBuscarAlumno();
+            DialogResult dialogResult=frmBuscarAlumno.ShowDialog();
+            if (dialogResult == DialogResult.OK) {
+                int tipo = frmBuscarAlumno.Tipo;
+                string parametro = frmBuscarAlumno.Parametro;
+
+                DataTable result = _negocioAlumno.BuscarAlumnoByTipoAndParametroN(tipo, parametro);
+                if (result != null) {
+
+                    dgvAlumnos.DataSource = result;
+                    if (result.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Se encontraron " + result.Rows.Count + " registro(s)");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros");
+                    }
+                }
+                
+            }
+            
         }
     }
 }

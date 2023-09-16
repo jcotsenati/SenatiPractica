@@ -52,6 +52,12 @@
     <Compile Include="datos\alumno\EntidadAlumno.cs" />
     <Compile Include="datos\login\EntidadLogin.cs" />
     <Compile Include="negocio\alumno\NegocioAlumno.cs" />
+    <Compile Include="presentacion\alumno\FrmBuscarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\alumno\FrmBuscarAlumno.Designer.cs">
+      <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\alumno\FrmIngresarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="presentacion\alumno\FrmBuscarAlumno.resx">
+      <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presentacion\alumno\FrmIngresarAlumno.resx">
       <DependentUpon>FrmIngresarAlumno.cs</DependentUpon>
     </EmbeddedResource>
