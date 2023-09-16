@@ -18,6 +18,9 @@ namespace SenatiPractica.presentacion.alumno
     {
         private NegocioAlumno _negocioAlumno = new NegocioAlumno();
 
+        public delegate void AlumnoGrillaLoadEventHandler();
+        public event AlumnoGrillaLoadEventHandler AlumnoGrillaLoaded;
+
         public FrmIngresarAlumno()
         {
             InitializeComponent();
@@ -38,6 +41,9 @@ namespace SenatiPractica.presentacion.alumno
                 txtDni.Text = "";
                 txtNombres.Text = "";
                 txtApellidos.Text = "";
+                if (AlumnoGrillaLoaded != null) {
+                    AlumnoGrillaLoaded(); //Invoco al evento refrescar grilla
+                }
             }
         }
 
