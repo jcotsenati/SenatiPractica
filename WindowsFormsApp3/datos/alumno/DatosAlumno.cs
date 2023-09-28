@@ -61,9 +61,25 @@ namespace SenatiPractica.datos.alumno
                 return 0;
             }
         }
-        public void EliminarAlumno(int idAlumno)
+        public int EliminarAlumno(int idAlumno)
         {
+            try
+            {
 
+                using (SqlCommand cmd = new SqlCommand("eliminarAlumno", Connection.Singleton.SqlConnetionFactory))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Id", idAlumno);
+                    int numRes = cmd.ExecuteNonQuery();
+                    return numRes;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
         }
         public DataTable ObtenerTodosAlumnos()
         {

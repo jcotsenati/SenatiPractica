@@ -80,7 +80,7 @@
             this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlumnos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvAlumnos.Location = new System.Drawing.Point(148, 15);
-            this.dgvAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAlumnos.MultiSelect = false;
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.RowTemplate.Height = 24;
@@ -107,6 +107,7 @@
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBuscar
             // 

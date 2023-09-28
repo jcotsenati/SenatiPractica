@@ -119,5 +119,30 @@ namespace SenatiPractica.presentacion
             frmEditarAlumno.AlumnoGrillaLoaded += CargarTodosAlumnos;//Usamos eventos para refrescar la grilla
             frmEditarAlumno.ShowDialog();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvAlumnos.CurrentRow == null)
+            {
+
+                MessageBox.Show("Seleccione un alumno!!!");
+                return;
+            }
+
+            DialogResult resultado = MessageBox.Show("¿Deseas eliminar el registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (resultado == DialogResult.Yes)
+            {
+                int num = _negocioAlumno.EliminarAlumnoN(_alumnoSeleccionado.Id);
+                if (num != 0)
+                {
+
+                    CargarTodosAlumnos();
+                    MessageBox.Show("Operacion Satisfactoria");
+                }
+            }
+
+            
+        }
     }
 }

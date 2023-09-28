@@ -77,5 +77,9 @@ namespace SenatiPractica.negocio.alumno
 
             return _datosAlumno.EditarAlumno(alumno);
         }
+        public int EliminarAlumnoN(int idAlumno) {
+
+            return _datosAlumno.EliminarAlumno(idAlumno);
+        }
     }
 }
