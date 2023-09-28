@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="common\alumno\TipoBusquedaAlumno.cs" />
+    <Compile Include="common\alumno\ETipoBusquedaAlumno.cs" />
     <Compile Include="common\Connection.cs" />
     <Compile Include="datos\alumno\DatosAlumno.cs" />
     <Compile Include="datos\login\DatosLogin.cs" />

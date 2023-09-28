@@ -13,7 +13,7 @@ namespace SenatiPractica.presentacion.alumno
 {
     public partial class FrmBuscarAlumno : Form
     {
-        public TipoBusquedaAlumno Tipo { get; set; }
+        public ETipoBusquedaAlumno Tipo { get; set; }
         public string  Parametro { get; set; }
 
         public FrmBuscarAlumno()
@@ -27,9 +27,9 @@ namespace SenatiPractica.presentacion.alumno
             //1 NOMBRES
             //2 APELLIDOS
             switch (cbTipo.SelectedIndex) {
-                case 0: Tipo = TipoBusquedaAlumno.Dni; break;
-                case 1: Tipo = TipoBusquedaAlumno.Nombres; break;
-                case 2: Tipo = TipoBusquedaAlumno.Apellidos; break;
+                case 0: Tipo = ETipoBusquedaAlumno.Dni; break;
+                case 1: Tipo = ETipoBusquedaAlumno.Nombres; break;
+                case 2: Tipo = ETipoBusquedaAlumno.Apellidos; break;
             }
            
             Parametro=txtBusqueda.Text;

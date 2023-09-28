@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp3.common.alumno
 {
-    public enum TipoBusquedaAlumno
+    public enum ETipoBusquedaAlumno
     {
         Dni,
         Nombres,

@@ -87,7 +87,7 @@ namespace SenatiPractica.presentacion
             FrmBuscarAlumno frmBuscarAlumno= new FrmBuscarAlumno();
             DialogResult dialogResult=frmBuscarAlumno.ShowDialog();
             if (dialogResult == DialogResult.OK) {
-                TipoBusquedaAlumno tipo = frmBuscarAlumno.Tipo;
+                ETipoBusquedaAlumno tipo = frmBuscarAlumno.Tipo;
                 string parametro = frmBuscarAlumno.Parametro;
 
                 DataTable result = _negocioAlumno.BuscarAlumnoByTipoAndParametroN(tipo, parametro);

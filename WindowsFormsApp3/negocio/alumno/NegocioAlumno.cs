@@ -43,10 +43,10 @@ namespace SenatiPractica.negocio.alumno
 
             return _datosAlumno.ObtenerTodosAlumnos();
         }
-        public DataTable BuscarAlumnoByTipoAndParametroN(TipoBusquedaAlumno tipo, string parametro) {
+        public DataTable BuscarAlumnoByTipoAndParametroN(ETipoBusquedaAlumno tipo, string parametro) {
 
             //validaciones
-            if (tipo == TipoBusquedaAlumno.Dni) {//DNI 
+            if (tipo == ETipoBusquedaAlumno.Dni) {//DNI 
                 if (Regex.IsMatch(parametro, "[aeiouAEIOU]", RegexOptions.IgnoreCase))
                 {
                     MessageBox.Show("El DNI no puede tener vocales");

@@ -104,16 +104,16 @@ namespace SenatiPractica.common.alumno
             }
 
         }
-        public DataTable BuscarAlumnoByTipoAndParametro(TipoBusquedaAlumno tipoBusquedaAlumno,string parametro)
+        public DataTable BuscarAlumnoByTipoAndParametro(ETipoBusquedaAlumno tipoBusquedaAlumno,string parametro)
         {
 
             try
             {
                 int tipo = -1;
                 switch (tipoBusquedaAlumno) {
-                    case TipoBusquedaAlumno.Dni:tipo = 1;break;
-                    case TipoBusquedaAlumno.Nombres: tipo = 2; break;
-                    case TipoBusquedaAlumno.Apellidos: tipo = 3; break;
+                    case ETipoBusquedaAlumno.Dni:tipo = 1;break;
+                    case ETipoBusquedaAlumno.Nombres: tipo = 2; break;
+                    case ETipoBusquedaAlumno.Apellidos: tipo = 3; break;
                 }
 
                 using (SqlCommand cmd = new SqlCommand("buscarAlumnoByTipoAndParametro", Connection.Singleton.SqlConnetionFactory))
