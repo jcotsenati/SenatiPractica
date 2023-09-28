@@ -99,3 +99,16 @@ BEGIN
 	UPDATE Alumno SET dni =@Dni , nombres = @Nombres,apellidos=@Apellidos WHERE id=@Id
 END
 GO
+CREATE PROCEDURE eliminarAlumno
+	-- Add the parameters for the stored procedure here
+	@Id int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT OFF;
+
+    -- Insert statements for procedure here
+	DELETE FROM Alumno WHERE id=@Id;
+END
+GO
