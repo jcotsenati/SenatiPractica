@@ -129,7 +129,7 @@ namespace SenatiPractica.presentacion
                 return;
             }
 
-            DialogResult resultado = MessageBox.Show("¿Deseas eliminar el registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult resultado = MessageBox.Show("¿Deseas eliminar el registro con dni: "+_alumnoSeleccionado.Dni+" ?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             if (resultado == DialogResult.Yes)
             {
