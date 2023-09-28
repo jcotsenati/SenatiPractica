@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace SenatiPractica.datos.login
+namespace SenatiPractica.common.login
 {
     internal class DatosLogin
     {

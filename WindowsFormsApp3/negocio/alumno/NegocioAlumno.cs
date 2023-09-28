@@ -6,8 +6,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SenatiPractica.datos;
-using SenatiPractica.datos.alumno;
+using SenatiPractica.common;
+using SenatiPractica.common.alumno;
 
 namespace SenatiPractica.negocio.alumno
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SenatiPractica.datos.alumno
+namespace SenatiPractica.common.alumno
 {
     public class EntidadAlumno
     {

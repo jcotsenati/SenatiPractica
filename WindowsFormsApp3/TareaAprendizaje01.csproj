@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="datos\Connection.cs" />
+    <Compile Include="common\Connection.cs" />
     <Compile Include="datos\alumno\DatosAlumno.cs" />
     <Compile Include="datos\login\DatosLogin.cs" />
-    <Compile Include="datos\alumno\EntidadAlumno.cs" />
-    <Compile Include="datos\login\EntidadLogin.cs" />
+    <Compile Include="common\alumno\EntidadAlumno.cs" />
+    <Compile Include="common\login\EntidadLogin.cs" />
     <Compile Include="negocio\alumno\NegocioAlumno.cs" />
     <Compile Include="presentacion\alumno\FrmBuscarAlumno.cs">
       <SubType>Form</SubType>

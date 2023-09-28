@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SenatiPractica.datos;
-using SenatiPractica.datos.alumno;
+using SenatiPractica.common;
+using SenatiPractica.common.alumno;
 using SenatiPractica.negocio;
 using SenatiPractica.negocio.alumno;
 

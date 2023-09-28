@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using SenatiPractica.datos.login;
+using SenatiPractica.common.login;
 using SenatiPractica.negocio.login;
 using SenatiPractica.presentacion;
 

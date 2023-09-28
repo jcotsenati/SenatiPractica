@@ -1,6 +1,6 @@
-﻿namespace SenatiPractica.datos.login
+﻿namespace SenatiPractica.common.login
 {
-    internal class EntidadLogin
+    public class EntidadLogin
     {
         public string Usuario { get; set; }
         public string Contrasenia { get; set; }

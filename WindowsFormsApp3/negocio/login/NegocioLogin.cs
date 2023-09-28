@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using SenatiPractica.datos.login;
+using SenatiPractica.common.login;
 
 namespace SenatiPractica.negocio.login
 {

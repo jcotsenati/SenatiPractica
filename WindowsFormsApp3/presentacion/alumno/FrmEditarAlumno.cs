@@ -1,4 +1,4 @@
-﻿using SenatiPractica.datos.alumno;
+﻿using SenatiPractica.common.alumno;
 using SenatiPractica.negocio.alumno;
 using System;
 using System.Collections.Generic;
