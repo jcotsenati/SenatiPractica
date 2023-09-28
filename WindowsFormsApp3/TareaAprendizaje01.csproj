@@ -58,6 +58,12 @@
     <Compile Include="presentacion\alumno\FrmBuscarAlumno.Designer.cs">
       <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="presentacion\alumno\FrmEditarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\alumno\FrmEditarAlumno.Designer.cs">
+      <DependentUpon>FrmEditarAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="presentacion\alumno\FrmIngresarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="presentacion\alumno\FrmBuscarAlumno.resx">
       <DependentUpon>FrmBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\alumno\FrmEditarAlumno.resx">
+      <DependentUpon>FrmEditarAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\alumno\FrmIngresarAlumno.resx">
       <DependentUpon>FrmIngresarAlumno.cs</DependentUpon>

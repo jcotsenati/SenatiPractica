@@ -38,9 +38,28 @@ namespace SenatiPractica.datos.alumno
                 return 0;
             }
         }
-        public void EditarAlumno(EntidadAlumno alumno)
+        public int EditarAlumno(EntidadAlumno alumno)
         {
+            try
+            {
 
+                using (SqlCommand cmd = new SqlCommand("editarAlumno", Connection.Singleton.SqlConnetionFactory))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Id", alumno.Id);
+                    cmd.Parameters.AddWithValue("@Dni", alumno.Dni);
+                    cmd.Parameters.AddWithValue("@Nombres", alumno.Nombres);
+                    cmd.Parameters.AddWithValue("@Apellidos", alumno.Apellidos);
+                    int numRes = cmd.ExecuteNonQuery();
+                    return numRes;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
         }
         public void EliminarAlumno(int idAlumno)
         {

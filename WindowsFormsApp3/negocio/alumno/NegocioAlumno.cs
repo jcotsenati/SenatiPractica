@@ -55,6 +55,11 @@ namespace SenatiPractica.negocio.alumno
 
             return _datosAlumno.BuscarAlumnoByTipoAndParametro(tipo,parametro);
         }
-   
+
+        public int EditarAlumnoN(EntidadAlumno alumno)
+        {
+
+            return _datosAlumno.EditarAlumno(alumno);
+        }
     }
 }

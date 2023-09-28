@@ -4,12 +4,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SenatiPractica.datos.alumno;
 using SenatiPractica.negocio;
 using SenatiPractica.negocio.alumno;
-using SenatiPractica.presentacion.alumno;
 using SenatiPractica.presentacion.alumno;
 
 namespace SenatiPractica.presentacion
@@ -18,6 +19,7 @@ namespace SenatiPractica.presentacion
     {
         private NegocioAlumno _negocioAlumno = new NegocioAlumno();
 
+        private EntidadAlumno _alumnoSeleccionado = new EntidadAlumno();
         public FrmMenuPrincipal()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace SenatiPractica.presentacion
             CargarTodosAlumnos();
             MessageBox.Show("Bienvenido al Sistema", "Acceso al Sistema",
             MessageBoxButtons.OK);
-            //Ocultamos el formulario Login
+            
         }
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
@@ -55,12 +57,28 @@ namespace SenatiPractica.presentacion
         {
             //En caso el DataSource es null, no muestra nada en la grilla
             dgvAlumnos.DataSource = _negocioAlumno.ObtenerTodosAlumnosN();
+            SeleccionarAlumnoLoad();
         }
+        public void SeleccionarAlumnoLoad() {
 
+            if (dgvAlumnos.Rows.Count == 0) {
+                return;
+            }
+
+            string id = dgvAlumnos.CurrentRow.Cells[0].Value.ToString();
+            string dni = dgvAlumnos.CurrentRow.Cells[1].Value.ToString();
+            string nombres = dgvAlumnos.CurrentRow.Cells[2].Value.ToString();
+            string apellidos = dgvAlumnos.CurrentRow.Cells[3].Value.ToString();
+
+            _alumnoSeleccionado.Id = Convert.ToInt32(id);
+            _alumnoSeleccionado.Dni = dni;
+            _alumnoSeleccionado.Nombres = nombres;
+            _alumnoSeleccionado.Apellidos = apellidos;
+
+        }
         private void dgvAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string valor = dgvAlumnos.Rows[e.RowIndex].Cells[0].Value.ToString();
-            MessageBox.Show("clave id " + valor);
+            SeleccionarAlumnoLoad();   
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -87,6 +105,19 @@ namespace SenatiPractica.presentacion
                 
             }
             
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dgvAlumnos.CurrentRow == null) {
+
+                MessageBox.Show("Seleccion un alumno!!!");
+                return;
+            }
+
+            FrmEditarAlumno frmEditarAlumno = new FrmEditarAlumno(_alumnoSeleccionado);
+            frmEditarAlumno.AlumnoGrillaLoaded += CargarTodosAlumnos;//Usamos eventos para refrescar la grilla
+            frmEditarAlumno.ShowDialog();
         }
     }
 }
