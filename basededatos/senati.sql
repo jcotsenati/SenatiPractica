@@ -83,3 +83,19 @@ BEGIN
 
 END  
 GO
+CREATE PROCEDURE editarAlumno 
+	-- Add the parameters for the stored procedure here
+	@Id int,
+	@Dni varchar(8),
+    @Nombres varchar(50),
+    @Apellidos varchar(50)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT OFF;
+
+    -- Insert statements for procedure here
+	UPDATE Alumno SET dni =@Dni , nombres = @Nombres,apellidos=@Apellidos WHERE id=@Id
+END
+GO
