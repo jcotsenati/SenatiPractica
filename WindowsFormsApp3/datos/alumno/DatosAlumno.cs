@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlTypes;
-using WindowsFormsApp3.common.alumno;
+using SenatiPractica.common.alumno;
 
 namespace SenatiPractica.common.alumno
 {

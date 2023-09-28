@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp3.common.alumno
+namespace SenatiPractica.common.alumno
 {
     public enum ETipoBusquedaAlumno
     {

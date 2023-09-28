@@ -12,7 +12,7 @@ using SenatiPractica.common.alumno;
 using SenatiPractica.negocio;
 using SenatiPractica.negocio.alumno;
 using SenatiPractica.presentacion.alumno;
-using WindowsFormsApp3.common.alumno;
+using SenatiPractica.common.alumno;
 
 namespace SenatiPractica.presentacion
 {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SenatiPractica.common;
 using SenatiPractica.common.alumno;
-using WindowsFormsApp3.common.alumno;
+using SenatiPractica.common.alumno;
 
 namespace SenatiPractica.negocio.alumno
 {
