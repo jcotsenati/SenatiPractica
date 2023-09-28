@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SenatiPractica.common;
 using SenatiPractica.common.alumno;
+using WindowsFormsApp3.common.alumno;
 
 namespace SenatiPractica.negocio.alumno
 {
@@ -42,10 +43,10 @@ namespace SenatiPractica.negocio.alumno
 
             return _datosAlumno.ObtenerTodosAlumnos();
         }
-        public DataTable BuscarAlumnoByTipoAndParametroN(int tipo, string parametro) {
+        public DataTable BuscarAlumnoByTipoAndParametroN(TipoBusquedaAlumno tipo, string parametro) {
 
             //validaciones
-            if (tipo == 1) {//DNI 
+            if (tipo == TipoBusquedaAlumno.Dni) {//DNI 
                 if (Regex.IsMatch(parametro, "[aeiouAEIOU]", RegexOptions.IgnoreCase))
                 {
                     MessageBox.Show("El DNI no puede tener vocales");

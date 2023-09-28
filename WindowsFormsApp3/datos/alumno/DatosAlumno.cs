@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlTypes;
+using WindowsFormsApp3.common.alumno;
 
 namespace SenatiPractica.common.alumno
 {
@@ -103,11 +104,17 @@ namespace SenatiPractica.common.alumno
             }
 
         }
-        public DataTable BuscarAlumnoByTipoAndParametro(int tipo,string parametro)
+        public DataTable BuscarAlumnoByTipoAndParametro(TipoBusquedaAlumno tipoBusquedaAlumno,string parametro)
         {
 
             try
             {
+                int tipo = -1;
+                switch (tipoBusquedaAlumno) {
+                    case TipoBusquedaAlumno.Dni:tipo = 1;break;
+                    case TipoBusquedaAlumno.Nombres: tipo = 2; break;
+                    case TipoBusquedaAlumno.Apellidos: tipo = 3; break;
+                }
 
                 using (SqlCommand cmd = new SqlCommand("buscarAlumnoByTipoAndParametro", Connection.Singleton.SqlConnetionFactory))
                 {

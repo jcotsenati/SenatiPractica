@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp3.common.alumno;
 
 namespace SenatiPractica.presentacion.alumno
 {
     public partial class FrmBuscarAlumno : Form
     {
-        public int Tipo { get; set; }
+        public TipoBusquedaAlumno Tipo { get; set; }
         public string  Parametro { get; set; }
 
         public FrmBuscarAlumno()
@@ -25,7 +26,12 @@ namespace SenatiPractica.presentacion.alumno
             //0 DNI 
             //1 NOMBRES
             //2 APELLIDOS
-            Tipo = cbTipo.SelectedIndex + 1;
+            switch (cbTipo.SelectedIndex) {
+                case 0: Tipo = TipoBusquedaAlumno.Dni; break;
+                case 1: Tipo = TipoBusquedaAlumno.Nombres; break;
+                case 2: Tipo = TipoBusquedaAlumno.Apellidos; break;
+            }
+           
             Parametro=txtBusqueda.Text;
             this.DialogResult = DialogResult.OK; // Establecer el resultado del diálogo.
             this.Close();

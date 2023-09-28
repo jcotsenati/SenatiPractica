@@ -12,6 +12,7 @@ using SenatiPractica.common.alumno;
 using SenatiPractica.negocio;
 using SenatiPractica.negocio.alumno;
 using SenatiPractica.presentacion.alumno;
+using WindowsFormsApp3.common.alumno;
 
 namespace SenatiPractica.presentacion
 {
@@ -86,7 +87,7 @@ namespace SenatiPractica.presentacion
             FrmBuscarAlumno frmBuscarAlumno= new FrmBuscarAlumno();
             DialogResult dialogResult=frmBuscarAlumno.ShowDialog();
             if (dialogResult == DialogResult.OK) {
-                int tipo = frmBuscarAlumno.Tipo;
+                TipoBusquedaAlumno tipo = frmBuscarAlumno.Tipo;
                 string parametro = frmBuscarAlumno.Parametro;
 
                 DataTable result = _negocioAlumno.BuscarAlumnoByTipoAndParametroN(tipo, parametro);
