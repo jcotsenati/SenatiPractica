@@ -58,6 +58,22 @@ namespace SenatiPractica.negocio.alumno
 
         public int EditarAlumnoN(EntidadAlumno alumno)
         {
+            //validaciones
+            if (alumno.Dni.Length != 8)
+            {
+                MessageBox.Show("Longitud de dni incorrecta");
+                return 0;
+            }
+            if (alumno.Nombres.Length == 0)
+            {
+                MessageBox.Show("Nombres esta vacio");
+                return 0;
+            }
+            if (alumno.Apellidos.Length == 0)
+            {
+                MessageBox.Show("Apellidos esta vacio");
+                return 0;
+            }
 
             return _datosAlumno.EditarAlumno(alumno);
         }
