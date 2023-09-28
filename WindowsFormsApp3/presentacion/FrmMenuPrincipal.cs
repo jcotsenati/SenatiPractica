@@ -145,5 +145,10 @@ namespace SenatiPractica.presentacion
 
             
         }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            CargarTodosAlumnos();
+        }
     }
 }
