@@ -53,8 +53,8 @@ namespace SenatiPractica
                 //Ocultamos el formulario Login
                 this.Hide();
                 //Mostramos el MenuPrincipal
-                FrmMenuPrincipal frmMenuPrincipal = new FrmMenuPrincipal();
-                frmMenuPrincipal.Show();
+                FrmMenuAlumno frmMenuAlumno = new FrmMenuAlumno();
+                frmMenuAlumno.Show();
               
             }
 
