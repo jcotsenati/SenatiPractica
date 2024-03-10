@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using SenatiPractica.common.login;
 using SenatiPractica.negocio.login;
 using SenatiPractica.presentacion;
+using WindowsFormsApp3.presentacion;
 
 namespace SenatiPractica
 {
@@ -53,8 +54,8 @@ namespace SenatiPractica
                 //Ocultamos el formulario Login
                 this.Hide();
                 //Mostramos el MenuPrincipal
-                FrmMenuAlumno frmMenuAlumno = new FrmMenuAlumno();
-                frmMenuAlumno.Show();
+                FrmMenuPrincipal frmMenuPrincipal=new FrmMenuPrincipal();
+                frmMenuPrincipal.ShowDialog();
               
             }
 
@@ -62,6 +63,11 @@ namespace SenatiPractica
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             Login();
+        }
+
+        private void txtConeccion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

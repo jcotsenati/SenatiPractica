@@ -16,6 +16,7 @@ namespace SenatiPractica.presentacion.alumno
 {
     public partial class FrmIngresarAlumno : Form
     {
+
         private NegocioAlumno _negocioAlumno = new NegocioAlumno();
 
         public delegate void AlumnoGrillaLoadEventHandler();
@@ -45,6 +46,7 @@ namespace SenatiPractica.presentacion.alumno
                     AlumnoGrillaLoaded(); //Invoco al evento refrescar grilla
                 }
             }
+            
         }
 
         private void FrmIngresarAlumno_Load(object sender, EventArgs e)

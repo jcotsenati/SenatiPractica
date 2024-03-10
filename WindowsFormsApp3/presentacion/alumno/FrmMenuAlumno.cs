@@ -27,19 +27,18 @@ namespace SenatiPractica.presentacion
         }
         private void FrmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Hide();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
         }
 
         private void FrmMenuPrincipal_Shown(object sender, EventArgs e)
         {
             CargarTodosAlumnos();
-            MessageBox.Show("Bienvenido al Sistema", "Acceso al Sistema",
-            MessageBoxButtons.OK);
+            
             
         }
 
@@ -54,7 +53,7 @@ namespace SenatiPractica.presentacion
             frmIngresarAlumno.AlumnoGrillaLoaded += CargarTodosAlumnos;//Usamos eventos para refrescar la grilla
             frmIngresarAlumno.ShowDialog();
         }
-        private void CargarTodosAlumnos()
+        public void CargarTodosAlumnos()
         {
             //En caso el DataSource es null, no muestra nada en la grilla
             dgvAlumnos.DataSource = _negocioAlumno.ObtenerTodosAlumnosN();

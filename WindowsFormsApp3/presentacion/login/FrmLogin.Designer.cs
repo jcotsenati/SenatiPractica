@@ -72,7 +72,7 @@
             this.label1.Location = new System.Drawing.Point(22, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario";
             // 
@@ -82,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(22, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(70, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
@@ -94,6 +94,7 @@
             this.txtConeccion.TabIndex = 5;
             this.txtConeccion.Text = "Data Source=DESKTOP-VLV57I9\\SQLEXPRESS;Initial Catalog=Senati;Integrated Security" +
     "=True";
+            this.txtConeccion.TextChanged += new System.EventHandler(this.txtConeccion_TextChanged);
             // 
             // label3
             // 
@@ -101,7 +102,7 @@
             this.label3.Location = new System.Drawing.Point(22, 318);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 13);
+            this.label3.Size = new System.Drawing.Size(122, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Cadena de Conexion";
             // 

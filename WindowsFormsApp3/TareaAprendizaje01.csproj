@@ -48,11 +48,14 @@
   <ItemGroup>
     <Compile Include="common\alumno\ETipoBusquedaAlumno.cs" />
     <Compile Include="common\Connection.cs" />
+    <Compile Include="common\instructor\EntidadInstructor.cs" />
     <Compile Include="datos\alumno\DatosAlumno.cs" />
+    <Compile Include="datos\instructor\DatosInstructor.cs" />
     <Compile Include="datos\login\DatosLogin.cs" />
     <Compile Include="common\alumno\EntidadAlumno.cs" />
     <Compile Include="common\login\EntidadLogin.cs" />
     <Compile Include="negocio\alumno\NegocioAlumno.cs" />
+    <Compile Include="negocio\instructor\NegocioInstructor.cs" />
     <Compile Include="presentacion\alumno\FrmBuscarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +73,24 @@
     </Compile>
     <Compile Include="presentacion\alumno\FrmIngresarAlumno.Designer.cs">
       <DependentUpon>FrmIngresarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\instructor\FrmIngresarInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\instructor\FrmIngresarInstructor.Designer.cs">
+      <DependentUpon>FrmIngresarInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentacion\instructor\FrmMenuInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentacion\instructor\FrmMenuInstructor.Designer.cs">
+      <DependentUpon>FrmMenuInstructor.cs</DependentUpon>
     </Compile>
     <Compile Include="presentacion\login\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -94,6 +115,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\alumno\FrmIngresarAlumno.resx">
       <DependentUpon>FrmIngresarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\instructor\FrmIngresarInstructor.resx">
+      <DependentUpon>FrmIngresarInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentacion\instructor\FrmMenuInstructor.resx">
+      <DependentUpon>FrmMenuInstructor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentacion\login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
