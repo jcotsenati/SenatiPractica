@@ -33,9 +33,22 @@ namespace SenatiPractica.common.alumno
                     
                 }
             }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627 || ex.Number == 2601) // Números de error específicos para violación de restricción de unicidad
+                {
+                    MessageBox.Show("El valor del campo DNI ya existe. Por favor, ingrese un DNI único.", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                return 0;
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
         }
