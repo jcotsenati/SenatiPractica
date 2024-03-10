@@ -17,7 +17,43 @@ CREATE TABLE Usuario(
 GO
 INSERT INTO Usuario VALUES('jorge','jorge1')
 GO
---PROCEDIMIENTOS ALMACENADOS
+
+CREATE TABLE Instructor(  
+    id int IDENTITY(1,1) NOT NULL PRIMARY KEY,  
+    dni varchar(8) NOT NULL,  
+    nombres varchar(50) NOT NULL,  
+    apellidos varchar(50) NOT NULL,
+    CONSTRAINT uc_DNI UNIQUE (dni)  
+)
+GO
+
+--PROCEDIMIENTOS ALMACENADOS INSTRUCTOR
+CREATE PROCEDURE insertarInstructor 
+(
+    @Dni varchar(8),
+    @Nombres varchar(50),
+    @Apellidos varchar(50)
+)   
+AS  
+BEGIN  
+    
+    SET NOCOUNT OFF;
+
+    INSERT INTO Instructor(dni,nombres,apellidos) VALUES(@Dni,@Nombres,@Apellidos)
+
+END
+GO
+CREATE PROCEDURE obtenerTodosInstructores    
+AS  
+BEGIN  
+    
+    SET NOCOUNT ON;
+
+    SELECT id,dni,nombres,apellidos from Alumno ORDER BY id DESC;
+
+END 
+GO
+--PROCEDIMIENTOS ALMACENADOS ALUMNOS
 CREATE PROCEDURE insertarAlumno 
 (
     @Dni varchar(8),
