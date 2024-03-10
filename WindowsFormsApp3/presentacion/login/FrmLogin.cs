@@ -27,7 +27,7 @@ namespace SenatiPractica
             _objNegocio = new NegocioLogin();
 
         }
-        void Login()//Creando un procedimiento.
+        private void Login()//Creando un procedimiento.
         {
             Connection.Singleton.ConnetionString = txtConeccion.Text;
             _objEntidad.Usuario = txtUsuario.Text;
@@ -48,8 +48,6 @@ namespace SenatiPractica
             }
             else
             {
-                //MessageBox.Show("Bienvenido al Sistema", "Acceso al Sistema",
-                //MessageBoxButtons.OK);
                 //Ocultamos el formulario Login
                 this.Hide();
                 //Mostramos el MenuPrincipal
