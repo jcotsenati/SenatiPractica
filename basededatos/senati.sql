@@ -29,7 +29,7 @@ BEGIN
     
     SET NOCOUNT OFF;
 
-    INSERT INTO Alumno VALUES(@Dni,@Nombres,@Apellidos)
+    INSERT INTO Alumno(dni,nombres,apellidos) VALUES(@Dni,@Nombres,@Apellidos)
 
 END
 GO
@@ -53,7 +53,7 @@ BEGIN
     
     SET NOCOUNT ON;
 
-    SELECT * from Alumno ORDER BY id DESC;
+    SELECT id,dni,nombres,apellidos from Alumno ORDER BY id DESC;
 
 END  
 GO
