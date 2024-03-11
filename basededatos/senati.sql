@@ -23,7 +23,7 @@ CREATE TABLE Instructor(
     dni varchar(8) NOT NULL,  
     nombres varchar(50) NOT NULL,  
     apellidos varchar(50) NOT NULL,
-    CONSTRAINT uc_DNI UNIQUE (dni)  
+    CONSTRAINT uc_DNI_INSTRUCTOR UNIQUE (dni)  
 )
 GO
 
