@@ -70,6 +70,21 @@ namespace SenatiPractica.common.alumno
 
                 }
             }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627) //error específico de violación de restricción de unicidad
+                {
+                    int index = ex.Message.IndexOf("uc_DNI");//encontramos el nombre de la restriccion
+                    if (index != 0)
+                    {
+                        MessageBox.Show($"El valor del campo DNI: '{alumno.Dni}' ya existe. Por favor, ingrese un DNI único.", "Error de actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return 0;
+                    }
+                }
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
