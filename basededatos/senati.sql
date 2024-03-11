@@ -4,7 +4,7 @@ CREATE TABLE Alumno(
     dni varchar(8) NOT NULL,  
     nombres varchar(50) NOT NULL,  
     apellidos varchar(50) NOT NULL,
-    CONSTRAINT uc_DNI UNIQUE (dni)  
+    CONSTRAINT uc_DNI_ALUMNO UNIQUE (dni)  
 )
 GO
 INSERT INTO Alumno VALUES('40689783','JUAN','PEREZ')

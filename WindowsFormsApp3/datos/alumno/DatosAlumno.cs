@@ -37,7 +37,7 @@ namespace SenatiPractica.common.alumno
             {
                 if (ex.Number == 2627) //error específico de violación de restricción de unicidad
                 {
-                    int index=ex.Message.IndexOf("uc_DNI");//encontramos el nombre de la restriccion
+                    int index=ex.Message.IndexOf("uc_DNI_ALUMNO");//encontramos el nombre de la restriccion
                     if (index != 0) {
                         MessageBox.Show($"El valor del campo DNI: '{alumno.Dni}' ya existe. Por favor, ingrese un DNI único.", "Error de inserción", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return 0;
@@ -74,7 +74,7 @@ namespace SenatiPractica.common.alumno
             {
                 if (ex.Number == 2627) //error específico de violación de restricción de unicidad
                 {
-                    int index = ex.Message.IndexOf("uc_DNI");//encontramos el nombre de la restriccion
+                    int index = ex.Message.IndexOf("uc_DNI_ALUMNO");//encontramos el nombre de la restriccion
                     if (index != 0)
                     {
                         MessageBox.Show($"El valor del campo DNI: '{alumno.Dni}' ya existe. Por favor, ingrese un DNI único.", "Error de actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
