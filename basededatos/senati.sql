@@ -70,15 +70,15 @@ BEGIN
 	-- DNI
 	IF @Tipo = 1  
     BEGIN
-		SELECT * FROM Alumno WHERE dni LIKE '%'+@Parametro+'%' ORDER BY id DESC;
+		SELECT id,dni,nombres,apellidos FROM Alumno WHERE dni LIKE '%'+@Parametro+'%' ORDER BY id DESC;
 	END
     IF @Tipo = 2  
     BEGIN
-		SELECT * FROM Alumno WHERE nombres LIKE '%'+@Parametro+'%' ORDER BY id DESC;
+		SELECT id,dni,nombres,apellidos FROM Alumno WHERE nombres LIKE '%'+@Parametro+'%' ORDER BY id DESC;
 	END
 	IF @Tipo = 3  
     BEGIN
-		SELECT * FROM Alumno WHERE apellidos LIKE '%'+@Parametro+'%' ORDER BY id DESC;
+		SELECT id,dni,nombres,apellidos FROM Alumno WHERE apellidos LIKE '%'+@Parametro+'%' ORDER BY id DESC;
 	END
 
 END  
