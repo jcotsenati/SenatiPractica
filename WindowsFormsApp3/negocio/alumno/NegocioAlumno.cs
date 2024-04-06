@@ -6,9 +6,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SenatiPractica.common;
+
 using SenatiPractica.common.alumno;
-using SenatiPractica.common.alumno;
+using SenatiPractica.datos.alumno;
 
 namespace SenatiPractica.negocio.alumno
 {

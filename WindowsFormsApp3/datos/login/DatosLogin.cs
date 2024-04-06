@@ -1,9 +1,10 @@
-﻿using System;
+﻿using SenatiPractica.common.login;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace SenatiPractica.common.login
+namespace SenatiPractica.datos.login
 {
     internal class DatosLogin
     {

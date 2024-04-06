@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Data.SqlTypes;
 using SenatiPractica.common.alumno;
 
-namespace SenatiPractica.common.alumno
+namespace SenatiPractica.datos.alumno
 {
     internal class DatosAlumno
     {

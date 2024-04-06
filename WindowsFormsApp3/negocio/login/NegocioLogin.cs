@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System.Windows.Forms;
 using SenatiPractica.common.login;
+using SenatiPractica.datos.login;
 
 namespace SenatiPractica.negocio.login
 {
